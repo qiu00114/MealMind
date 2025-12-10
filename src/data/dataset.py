@@ -2,6 +2,7 @@ import shutil
 from pathlib import Path
 import kagglehub
 
+from ..config import RAW_DATA_DIR
 
 DATASET_ID = "shuyangli94/food-com-recipes-and-user-interactions"
 
@@ -34,10 +35,7 @@ def move_files_to_raw(download_root: Path) -> Path:
     """
     Move all files under the downloaded directory into ../data/raw.
     """
-    # src/ directory
-    script_dir = Path(__file__).resolve().parent
-    # ../data/raw
-    raw_dir = script_dir.parent / "data" / "raw"
+    raw_dir = RAW_DATA_DIR
     raw_dir.mkdir(parents=True, exist_ok=True)
 
     for f in download_root.rglob("*"):

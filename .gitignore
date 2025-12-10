@@ -1,4 +1,4 @@
 # Ignore downloaded dataset
 /data/
 !src/data/ 
-src/__pycache__
+__pycache__
