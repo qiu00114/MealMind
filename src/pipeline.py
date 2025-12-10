@@ -2,11 +2,17 @@
 Full data preparation pipeline.
 """
 
-from src.data_io import load_raw_data, save_processed_data
-from src.features_interactions import clean_and_merge, add_interaction_context_features
-from src.features_recipes import add_recipe_features
-from src.baseline_context import build_context_stats
-from src.config import PROCESSED_DATA_DIR
+from .config import RAW_DATA_DIR, PROCESSED_DATA_DIR
+
+from .data.data_io import load_raw_data, save_processed_data
+from .data.features_interactions import (
+    clean_and_merge,
+    add_interaction_context_features,
+)
+from .data.features_recipes import add_recipe_features
+
+from .models.baseline_context import build_context_stats
+
 
 
 def run_full_pipeline():
