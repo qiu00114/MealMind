@@ -20,11 +20,6 @@ MealMind is a **context-aware personalized meal recommendation system** that hel
 ├── data/
 │   ├── raw/                # Original Kaggle CSV files
 │   └── processed/          # Cleaned / merged data files
-├── notebooks/
-│   ├── 01_load_data.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_baseline_models.ipynb
-│   └── 04_evaluation.ipynb
 ├── src/
 │   ├── data_utils.py
 │   ├── models.py
@@ -57,7 +52,11 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Download the Food.com dataset and place CSV files into `data/raw/`.
+4. Run the dataset manager to automatically download the Food.com dataset and move all files into `data/raw/`:
+
+```
+python data/dataset.py
+```
 
 ---
 
